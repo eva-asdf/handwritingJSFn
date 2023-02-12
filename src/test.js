@@ -23,12 +23,27 @@
 
 
 
-console.log('outer');
+// console.log('outer');
 
-setTimeout(() => {
-  console.log('setTimeout');
-}, 4);
+// setTimeout(() => {
+//   console.log('setTimeout');
+// }, 4);
 
-setImmediate(() => {
-  console.log('setImmediate');
-});
+// setImmediate(() => {
+//   console.log('setImmediate');
+// });
+
+
+const arr = Array(100000)
+  .fill(0)
+arr[9999] = {}
+arr[99999] = []
+arr[3333] = 123
+
+console.time()
+arr.includes(123)
+// for (let i = 0;i < 100000;i++) {
+//   if (arr[i] === 123) break 
+// }
+// arr.findIndex((val) => val === 123)
+console.timeEnd()
